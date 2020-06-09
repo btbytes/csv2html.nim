@@ -31,7 +31,7 @@ when isMainModule:
     option("-t", "--title", help="Page Title. Will be printed in h1 tag")
     option("-c", "--caption", help="Table Caption")
     option("-s", "--css", help="Override CSS URL")
-    flag("-f", "--header", help="Data has Header. Flow row will be `th`")
+    flag("-f", "--header", help="Data has Header. First row will be rendered as `th`")
   if paramCount() < 1:
     echo p.help()
     quit(0)
