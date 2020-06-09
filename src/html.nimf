@@ -1,0 +1,37 @@
+#? stdtmpl(subChar='$', metaChar='#')
+#proc renderHtml*(content: string, title: string, cssurl = "") : string = 
+#  result = ""
+<!doctype html><head>
+  #if cssurl == "":
+    <style type="text/css">
+    table {
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    td,
+    th {
+      padding: 6px;
+      text-align: left;
+    }
+
+    thead {
+      border-bottom: 1px solid var(--border);
+    }
+
+    tfoot {
+      border-top: 1px solid var(--border);
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: var(--background-alt);
+    }
+    </style>
+  #else:
+    <link rel="stylesheet" href="${cssurl}">
+  #end if
+</head><body>
+${content}
+</body>
+</html>
+

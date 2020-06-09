@@ -1,0 +1,13 @@
+#? stdtmpl(subChar='$', metaChar='#')
+#proc renderTable*(caption: string, headerRow: string, rows: seq[string]) : string = 
+#  result = ""
+<table>
+  #if caption != "":
+    <caption>${caption}</caption>
+  #end if
+  ${headerRow}
+  #for row in items(rows):
+    $row
+  #end for
+</table>
+#end proc

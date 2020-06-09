@@ -1,0 +1,9 @@
+#? stdtmpl(subChar='$', metaChar='#')
+#proc renderRow*(row: CsvRow, rowtype = "tr") : string = 
+#  result = ""
+<${rowtype}>
+  #for c in items(row):
+    <td>${c}</td>
+  #end for
+</${rowtype}>
+#end proc
